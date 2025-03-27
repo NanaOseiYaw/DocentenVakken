@@ -6,9 +6,9 @@
 <body>
     <h1>Overzicht van Vakken</h1>
     <ul>
-        @foreach($vakken as $vak)
+        @foreach($vakken as $subject) <!-- Loop through $vakken -->
             <li>
-                {{ $vak->name }} - {{ $vak->bescription }} (Docent: {{ $vak->docent->name }})
+                {{ $subject->name }} - {{ $subject->description }} (Docent: {{ $subject->teacher->name }})
             </li>
         @endforeach
     </ul>

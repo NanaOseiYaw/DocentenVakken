@@ -10,6 +10,6 @@ class SubjectController extends Controller
     public function index()
     {
         $vakken = Subject::with('teacher')->orderBy('name')->get();
-        return view('vakken.index', compact('subjects'));
+        return view('subjects.index', compact('vakken'));
     }
 }

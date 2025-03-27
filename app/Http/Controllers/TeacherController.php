@@ -9,6 +9,6 @@ class TeacherController extends Controller
     public function index()
     {
         $docenten = Teacher::with('subjects')->orderBy('name')->get();
-        return view('docenten.index', compact('teachers'));
+        return view('teachers.index', compact('teachers'));
     }
 }
