@@ -8,9 +8,9 @@
     <ul>
         @foreach($docenten as $docent)
             <li>
-                {{ $teacher->name }} (Hobby's: {{ $teacher->hobby ?? 'Geen' }})
+                {{ $docent->name }} (Hobby's: {{ $docent->hobby ?? 'Geen' }})
                 <ul>
-                    @foreach($teacher->subjects as $subject)
+                    @foreach($docent->subjects as $subject) <!-- Corrected to $docent->subjects -->
                         <li>{{ $subject->name }} - {{ $subject->description }}</li>
                     @endforeach
                 </ul>
